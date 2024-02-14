@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Homework02 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            // Вводим стороны треугольника:
+            System.out.println("Введите сторону a:");
+            int a = input.nextInt();
+            System.out.println("Введите сторону b:");
+            int b = input.nextInt();
+            System.out.println("Введите сторону c:");
+            int c = input.nextInt();
+            // Проверяем условие: одна из сторон не должна превышать сумму двух других:
+            if (a <= b + c && b <= c + a && c <= a + b) {  // условие выполненно.
+                System.out.println("Такой треугольник существует!");
+            } else {                                       // остальные условия
+                System.out.println("Такого треугольника не существует!");
+            }
+        }
+    }
+}
